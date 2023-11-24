@@ -14,6 +14,14 @@ const Welcome = () => {
         <Text style={styles.userName}>Hello Nirmal</Text>
         <Text style={styles.welcomeMessage}>Find your future job here</Text>
       </View>
+
+      <View styles={styles.searchContainer}>
+        <View style={styles.searchWrapper}>
+          <TextInput
+            style={styles.searchInput}
+          />
+        </View>
+      </View>
     </View>
   )
 }
