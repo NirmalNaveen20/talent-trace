@@ -11,6 +11,16 @@ const Layout = () => {
         DMMedium: require('../assets/fonts/DMSans-Medium.ttf'),
         DMRegular: require('../assets/fonts/DMSans-Regular.ttf')
     })
+
+    const onLayoutRootView = useCallback(async () => {
+        if (fontsLoaded) {
+            await SplashScreen.hideAsync();
+        }
+    }, [fontsLoaded])
+
+    if (!fontsLoaded) return null;
+
+    return <Stack onLayout={onLayoutRootView} />
 }
 
 export default Layout; 
