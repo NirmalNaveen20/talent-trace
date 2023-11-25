@@ -41,7 +41,8 @@ const Popularjobs = () => {
           <ActivityIndicator size='large' color={COLORS.primary} />
         ) : error ? (
           <Text>Something went wrong</Text>
-        ) : (
+          ) : (
+              
           <FlatList
             data={data}
             renderItem={({ item }) => (
@@ -54,7 +55,8 @@ const Popularjobs = () => {
             keyExtractor={(item) => item.job_id}
             contentContainerStyle={{ columnGap: SIZES.medium }}
             horizontal
-          />
+              />
+              
         )}
       </View>
     </View>
